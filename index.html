@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frasinka Josa Anassya | Portofolio & Personal Branding</title>
+  <meta name="description" content="Portofolio Personal Frasinka Josa Anassya - Mahasiswa Sistem Informasi Universitas Trunojoyo Madura (Web Development, System Analysis, Data Analytics, Creative Content).">
+  <meta name="author" content="Frasinka Josa Anassya">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23381f4f'/><text x='50' y='68' font-size='56' font-family='Poppins, sans-serif' font-weight='bold' text-anchor='middle' fill='%23fdbb30'>F</text></svg>">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            canvaPurple: '#381f4f',
+            canvaPurpleDark: '#26123a',
+            canvaMagenta: '#8c448f',
+            canvaAmber: '#f5a617',
+            canvaYellow: '#fdbb30',
+            canvaPeach: '#ffb356',
+            canvaCoral: '#e07a68',
+            canvaLavender: '#ede8f5',
+          },
+          fontFamily: {
+            sans: ['"Poppins"', 'sans-serif'],
+            display: ['"Anton"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Poppins & Anton -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS (Exact Canva PDF Replica) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body class="bg-white text-[#1e1329] dark:bg-[#0f0817] dark:text-[#f8fafc] transition-colors duration-300 relative selection:bg-[#381f4f] selection:text-[#fdbb30]">
+
+  <!-- ========================================================================
+       TOP FLOATING PILL NAVBAR (DIRECTLY REPLICATING CANVA PDF SLIDES)
+       Text links: Biodata (blue), Pengalaman (magenta), Skill (purple),
+                   Portofolio (blue), Ulasan (blue), Kontak Saya (pink)
+       ======================================================================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 px-4 pt-3 pb-2 pointer-events-none">
+    <div class="max-w-4xl mx-auto flex items-center justify-between pointer-events-auto">
+      
+      <!-- Canva Floating Rounded-Full Pill Navigation -->
+      <nav class="canva-floating-nav w-full py-2.5 px-6 sm:px-8 flex items-center justify-between transition-all">
+        
+        <!-- Left Inisial Icon -->
+        <a href="#cover" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 rounded-full bg-[#381f4f] text-[#fdbb30] font-extrabold text-sm flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+            F
+          </div>
+          <span class="text-xs sm:text-sm font-bold text-[#381f4f] dark:text-white hidden sm:inline">Frasinka</span>
+        </a>
+
+        <!-- Desktop Links with Canva PDF Exact Colors -->
+        <div class="hidden md:flex items-center gap-5 lg:gap-7 text-xs lg:text-sm font-semibold tracking-wide">
+          <a href="#cover" class="nav-link nav-link-portofolio hover:opacity-80 transition-opacity">Cover</a>
+          <a href="#perkenalan" class="nav-link nav-link-biodata hover:opacity-80 transition-opacity">Biodata</a>
+          <a href="#organisasi" class="nav-link nav-link-pengalaman hover:opacity-80 transition-opacity">Pengalaman</a>
+          <a href="#skill" class="nav-link nav-link-skill hover:opacity-80 transition-opacity">Skill</a>
+          <a href="#projek" class="nav-link nav-link-portofolio hover:opacity-80 transition-opacity">Portofolio</a>
+          <a href="#sertifikat" class="nav-link nav-link-skill hover:opacity-80 transition-opacity">Sertifikat</a>
+          <a href="#galeri" class="nav-link nav-link-ulasan hover:opacity-80 transition-opacity">Ulasan</a>
+          <a href="#kontak" class="nav-link nav-link-kontak hover:opacity-80 transition-opacity">Kontak Saya</a>
+        </div>
+
+        <!-- Right: Theme Switch & Mobile Menu Toggle -->
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" aria-label="Ganti Tema" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-purple-950 text-[#381f4f] dark:text-[#fdbb30] flex items-center justify-center text-xs hover:scale-105 transition">
+            <i id="theme-icon" class="fa-solid fa-moon"></i>
+          </button>
+          
+          <button id="mobile-menu-btn" aria-label="Buka Menu" class="md:hidden w-8 h-8 rounded-full bg-slate-100 dark:bg-purple-950 text-slate-700 dark:text-slate-200 flex items-center justify-center text-sm">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+      </nav>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden max-w-sm mx-auto mt-2 pointer-events-auto rounded-2xl bg-white/95 dark:bg-[#1a0f2b]/95 backdrop-blur-md p-4 space-y-2 border border-purple-100 dark:border-purple-900 shadow-xl text-center text-sm font-bold">
+      <a href="#cover" class="mobile-nav-link block py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-purple-50 dark:hover:bg-purple-950">Cover</a>
+      <a href="#perkenalan" class="mobile-nav-link block py-2 rounded-lg nav-link-biodata hover:bg-blue-50 dark:hover:bg-purple-950">Biodata</a>
+      <a href="#organisasi" class="mobile-nav-link block py-2 rounded-lg nav-link-pengalaman hover:bg-pink-50 dark:hover:bg-purple-950">Pengalaman</a>
+      <a href="#skill" class="mobile-nav-link block py-2 rounded-lg nav-link-skill hover:bg-purple-50 dark:hover:bg-purple-950">Skill</a>
+      <a href="#projek" class="mobile-nav-link block py-2 rounded-lg nav-link-portofolio hover:bg-blue-50 dark:hover:bg-purple-950">Portofolio</a>
+      <a href="#sertifikat" class="mobile-nav-link block py-2 rounded-lg text-[#8c448f] hover:bg-purple-50 dark:hover:bg-purple-950">Sertifikat</a>
+      <a href="#galeri" class="mobile-nav-link block py-2 rounded-lg nav-link-ulasan hover:bg-blue-50 dark:hover:bg-purple-950">Ulasan &amp; Galeri</a>
+      <a href="#kontak" class="mobile-nav-link block py-2 rounded-lg nav-link-kontak hover:bg-pink-50 dark:hover:bg-purple-950">Kontak Saya</a>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================
+       PART 1: HERO COVER (EXACT VISUAL REPLICA OF CANVA PDF PAGE 1)
+       Massive stylized gradient PORTOFOLIO text + Frasinka cutout photo overlapping +
+       "Sistem Informasi & Content Creator" subtitle + Purple flower ribbon
+       ======================================================================== -->
+  <section id="cover" class="pt-24 sm:pt-28 pb-0 bg-white dark:bg-[#0f0817] relative overflow-hidden transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+      
+      <!-- Big Center Composition: Giant Gradient PORTOFOLIO Text with Frasinka in Front -->
+      <div class="relative w-full min-h-[460px] sm:min-h-[580px] lg:min-h-[680px] xl:min-h-[740px] flex items-center justify-center overflow-hidden">
+        
+        <!-- Giant Gradient PORTOFOLIO Text (Extracted directly from Canva PDF Page 1) -->
+        <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-center select-none pointer-events-none z-0 px-2 sm:px-4">
+          <img 
+            src="assets/images/canva/portfolio-gradient-text.png" 
+            alt="PORTOFOLIO" 
+            class="w-full max-w-6xl object-contain opacity-95 dark:opacity-90 drop-shadow-sm"
+          />
+        </div>
+
+        <!-- Frasinka Transparent Cutout (Enlarged prominent display as requested) -->
+        <div class="relative z-10 h-full min-h-[440px] sm:min-h-[560px] lg:min-h-[660px] xl:min-h-[720px] flex items-end justify-center pointer-events-none pt-4">
+          <img 
+            src="assets/images/profile/frasinka-cutout-page1.png" 
+            alt="Frasinka Josa Anassya" 
+            class="h-[96%] sm:h-[98%] lg:h-[102%] max-h-[720px] w-auto object-contain object-bottom drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+          />
+        </div>
+
+        <!-- Subtitle on Bottom Right (Direct from Canva PDF Page 1) -->
+        <div class="absolute bottom-4 sm:bottom-8 right-2 sm:right-6 lg:right-10 z-20 text-right pointer-events-auto bg-white/60 dark:bg-[#0f0817]/60 backdrop-blur-xs px-2 py-1 rounded-lg">
+          <p class="text-xs sm:text-base lg:text-lg font-bold text-[#1e1329] dark:text-white leading-tight">
+            Sistem Informasi &amp;
+          </p>
+          <p class="text-xs sm:text-base lg:text-lg font-bold text-[#1e1329] dark:text-white leading-tight">
+            Content Creator
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Canva Signature Purple Gradient Banner with Flower Icons (Direct from Page 1 & 2) -->
+    <div class="w-full canva-bottom-ribbon py-2.5 sm:py-3.5 px-4 text-white overflow-hidden shadow-md">
+      <div class="marquee-wrapper">
+        <div class="marquee-content text-xs sm:text-sm font-bold tracking-wider flex items-center gap-6 sm:gap-10">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Pemodelan Sistem</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Manajemen Basis Data</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Content Creator</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Perencanaan Konten</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Enterprise Systems</span>
+          </span>
+
+          <!-- Repeat for infinite smooth scrolling -->
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Pemodelan Sistem</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Manajemen Basis Data</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Content Creator</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Perencanaan Konten</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Enterprise Systems</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       PART 2: INTERACTIVE PROFILE HERO (EXACT VISUAL REPLICA OF CANVA PDF PAGE 2)
+       [• Halo semuanya! •] box with 4 yellow corner dots +
+       "Frasinka Josa Anassya" with orange offset drop shadow +
+       Purple capsule button with yellow arrow + White outlined button +
+       Peach circle backdrop with Frasinka & floating yellow/purple badges!
+       ======================================================================== -->
+  <section id="perkenalan" class="py-16 sm:py-24 bg-[#fffdfb] dark:bg-[#12091f] transition-colors relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Intro, Stylized Name & Buttons (Exact Canva Page 2) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Canva Bounding-Box Badge with 4 Yellow Corner Dots -->
+          <div class="flex justify-center lg:justify-start">
+            <div class="canva-selection-badge">
+              <span class="canva-badge-dot-bl"></span>
+              <span class="canva-badge-dot-br"></span>
+              <span class="text-sm sm:text-base font-bold text-[#2d184a] dark:text-[#ffb356]">
+                Halo semuanya!
+              </span>
+            </div>
+          </div>
+
+          <!-- Stylized Name with 3D Warm Amber Offset Shadow (Canva Page 2) -->
+          <div>
+            <h1 class="canva-name-headline text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
+              Frasinka Josa Anassya
+            </h1>
+            <p class="text-sm sm:text-base font-semibold text-[#8c448f] dark:text-[#ffc371] mt-2">
+              Information Systems Student • Universitas Trunojoyo Madura
+            </p>
+          </div>
+
+          <!-- Description Text (Direct from Canva Page 2) -->
+          <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-normal max-w-xl mx-auto lg:mx-0">
+            Saya adalah seorang Mahasiswa Sistem Informasi dari <span class="font-semibold text-[#381f4f] dark:text-white">Universitas Trunojoyo Madura</span>, berfokus pada perancangan sistem, pengembangan website, analisis data, dan pembuatan konten kreatif.
+          </p>
+
+          <!-- Key Metrics Badge Row -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
+            <span class="px-3.5 py-1.5 rounded-full bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-800 text-xs font-bold text-[#381f4f] dark:text-[#ffc371]">
+              🎓 IPK 3.78 / 4.00
+            </span>
+            <span class="px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-xs font-bold text-emerald-700 dark:text-emerald-300">
+              📜 LoA Sinta 5 Terbit
+            </span>
+            <span class="px-3.5 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs font-bold text-[#f5a617]">
+              ✨ Staf Ahli UTM TV
+            </span>
+          </div>
+
+          <!-- Canva Buttons (Exact Page 2: Purple Capsule with Yellow Arrow & White Outlined) -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3">
+            
+            <!-- Button 1: Lihat Portofolio -->
+            <a href="#projek" class="canva-btn-purple">
+              <span>Lihat Portofolio</span>
+              <span class="canva-btn-arrow-circle">
+                <i class="fa-solid fa-play ml-0.5"></i>
+              </span>
+            </a>
+
+            <!-- Button 2: Hubungi saya -->
+            <a href="#kontak" class="canva-btn-outline">
+              Hubungi saya
+            </a>
+
+            <!-- Button 3: Download CV -->
+            <a href="assets/documents/cv/Frasinka-Josa-Anassya-CV.pdf" download="CV_Frasinka_Josa_Anassya.pdf" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-purple-50 dark:bg-purple-950/50 hover:bg-purple-100 text-[#381f4f] dark:text-[#ffc371] font-bold text-sm border border-purple-200 dark:border-purple-800 transition">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download CV</span>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Right Column: Peach Circle Backdrop + Cutout Photo + Badges (Enlarged prominent display as requested) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-[340px] sm:w-[440px] md:w-[480px] lg:w-[500px] xl:w-[540px] aspect-[1/1.08] flex items-center justify-center">
+            
+            <!-- Peach / Coral Organic Circle Backdrop (From Canva Page 2) -->
+            <div class="absolute inset-0 flex items-center justify-center z-0 p-2 sm:p-4">
+              <img 
+                src="assets/images/canva/hero-peach-circle.png" 
+                alt="Graphic Circle" 
+                class="w-full h-full object-contain animate-float"
+              />
+            </div>
+
+            <!-- Frasinka Cutout Photo (Enlarged prominent display) -->
+            <div class="relative z-10 w-full h-full flex items-end justify-center pointer-events-none">
+              <img 
+                src="assets/images/profile/frasinka-cutout-page2.png" 
+                alt="Frasinka Josa Anassya" 
+                class="h-[104%] sm:h-[108%] w-auto max-h-[660px] object-contain object-bottom drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+              />
+            </div>
+
+            <!-- Floating Yellow Pill Badge: Pemodelan System (Bottom-Left) -->
+            <div class="absolute -bottom-2 left-1 sm:left-4 z-20 canva-pill-yellow shadow-lg pointer-events-auto">
+              Pemodelan System
+            </div>
+
+            <!-- Floating Purple Arrow Badge: Content Creator (Right Edge) -->
+            <div class="absolute top-1/2 -right-2 sm:-right-6 -translate-y-1/2 z-20 canva-badge-purple-arrow pointer-events-auto">
+              Content Creator
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Canva Signature Purple Gradient Banner below Section 2 -->
+    <div class="w-full canva-bottom-ribbon py-2.5 sm:py-3.5 px-4 text-white overflow-hidden shadow-md mt-16">
+      <div class="marquee-wrapper">
+        <div class="marquee-content text-xs sm:text-sm font-bold tracking-wider flex items-center gap-6 sm:gap-10">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Pemodelan Sistem</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Manajemen Basis Data</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Content Creator</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Perencanaan Konten</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Enterprise Systems</span>
+          </span>
+
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Pemodelan Sistem</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Manajemen Basis Data</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Content Creator</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Perencanaan Konten</span>
+          </span>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-asterisk text-[#fdbb30] text-xs"></i>
+            <span>Enterprise Systems</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 3: BIODATA & ABOUT ME
+       ======================================================================== -->
+  <section id="biodata" class="py-20 bg-white dark:bg-[#0f0817] transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Canva Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <div class="canva-selection-badge">
+          <span class="canva-badge-dot-bl"></span>
+          <span class="canva-badge-dot-br"></span>
+          <span class="text-xs sm:text-sm font-bold text-[#2d184a] dark:text-[#ffb356]">
+            Biodata Diri
+          </span>
+        </div>
+        <h2 class="canva-section-title text-3xl sm:text-4xl">
+          Tentang Frasinka Josa Anassya
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Mahasiswa Sistem Informasi yang memadukan analisis sistem dengan kreativitas produksi media digital.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Pas Foto Card (Replaced as requested) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="canva-card p-5">
+            <div class="rounded-2xl overflow-hidden aspect-[3/4] bg-purple-50 dark:bg-purple-950/40 max-w-[340px] mx-auto shadow-inner">
+              <img 
+                src="assets/images/profile/pas-foto.jpeg" 
+                alt="Frasinka Josa Anassya - Pas Foto" 
+                class="w-full h-full object-cover object-top hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="pt-4 text-center">
+              <h3 class="text-lg font-bold text-[#1e1329] dark:text-white">Frasinka Josa Anassya</h3>
+              <p class="text-xs font-semibold text-[#8c448f] dark:text-[#ffc371]">NIM: 240441100028 • S1 Sistem Informasi UTM</p>
+            </div>
+          </div>
+
+          <!-- Academic Research Spotlight Card -->
+          <div class="p-5 rounded-2xl bg-gradient-to-r from-purple-50 to-amber-50/50 dark:from-[#1d0f30] dark:to-[#221338] border border-purple-200 dark:border-purple-800 shadow-sm flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-[#381f4f] text-[#fdbb30] flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-newspaper"></i>
+            </div>
+            <div>
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-extrabold bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300 uppercase tracking-wide mb-1">
+                LoA Jurnal Sinta 5
+              </span>
+              <h4 class="text-sm font-bold text-[#1e1329] dark:text-white leading-snug">
+                Riset Mandiri Terbit Jurnal Ilmiah
+              </h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+                Telah menulis mandiri sebuah artikel ilmiah yang dinyatakan diterima (Letter of Acceptance) untuk terbit di jurnal nasional terakreditasi Sinta 5.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Narrative & 4 Pillars -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="space-y-4 text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+            <p>
+              Saya adalah mahasiswa aktif semester 5 Program Studi Sistem Informasi Universitas Trunojoyo Madura (angkatan 2024, IPK 3.78/4.00) yang memiliki dedikasi pada <strong>perancangan sistem, pengembangan website, analisis basis data</strong>, serta <strong>produksi konten kreatif audio-visual</strong>.
+            </p>
+            <p>
+              Di lingkungan akademik, saya aktif mengerjakan proyek pemodelan enterprise architecture berbasis <em>TOGAF ADM</em>, rekayasa basis data relasional normalisasi 3NF, manajemen proyek waterfall, dan perancangan dashboard <em>Power BI</em>.
+            </p>
+            <p>
+              Di bidang non-akademik, saya dipercaya menjadi <strong>Admin Media Sosial Program Studi Sistem Informasi</strong> dan <strong>Content Creative (Staf Ahli) di UTM TV</strong>, serta berpengalaman sebagai Sekretaris PSDM di UKMFT-ITC dan pengurus komunitas daerah Kencana.
+            </p>
+          </div>
+
+          <!-- 4 Pillars -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl border border-purple-100 dark:border-purple-900 bg-purple-50/50 dark:bg-purple-950/20 space-y-1">
+              <span class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] block">💻 Web &amp; System Modeling</span>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Pemodelan UML, BPMN, ERD MySQL, dan implementasi UI frontend.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl border border-purple-100 dark:border-purple-900 bg-purple-50/50 dark:bg-purple-950/20 space-y-1">
+              <span class="text-xs font-bold text-[#8c448f] dark:text-[#ffc371] block">📊 Data Analytics &amp; BI</span>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Visualisasi data interaktif Power BI, Excel lanjutan, dan metode AHP.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl border border-purple-100 dark:border-purple-900 bg-purple-50/50 dark:bg-purple-950/20 space-y-1">
+              <span class="text-xs font-bold text-[#f5a617] block">🎬 Creative Content Production</span>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Perencanaan konten editorial, video editing CapCut, dan sosmed prodi.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl border border-purple-100 dark:border-purple-900 bg-purple-50/50 dark:bg-purple-950/20 space-y-1">
+              <span class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] block">🤝 Leadership &amp; Public Speaking</span>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Pengalaman memimpin divisi sekretaris, bendahara acara, dan Master of Ceremony.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 4: RIWAYAT PENDIDIKAN
+       ======================================================================== -->
+  <section id="pendidikan" class="py-20 bg-[#fffdfb] dark:bg-[#12091f] transition-colors">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <div class="canva-selection-badge">
+          <span class="canva-badge-dot-bl"></span>
+          <span class="canva-badge-dot-br"></span>
+          <span class="text-xs sm:text-sm font-bold text-[#2d184a] dark:text-[#ffb356]">
+            Riwayat Pendidikan
+          </span>
+        </div>
+        <h2 class="canva-section-title text-3xl sm:text-4xl">
+          Pendidikan Formal
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Jejak pendidikan akademik di bidang rekayasa perangkat lunak dan sistem informasi.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        
+        <!-- Edu 1: UTM -->
+        <article class="canva-card p-6 sm:p-8 border-l-8 border-l-[#381f4f]">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-purple-100 dark:border-purple-900 pb-4 mb-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-[#381f4f] text-white text-xs font-bold">
+                  S1 - Perguruan Tinggi
+                </span>
+                <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                  IPK: 3.78 / 4.00
+                </span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-[#1e1329] dark:text-white mt-2">
+                Universitas Trunojoyo Madura
+              </h3>
+              <p class="text-sm font-semibold text-[#8c448f] dark:text-[#ffc371]">
+                Program Studi Sistem Informasi • Fakultas Teknik
+              </p>
+            </div>
+            <div class="text-left sm:text-right">
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-purple-50 dark:bg-purple-950 text-[#381f4f] dark:text-purple-300 border border-purple-200 dark:border-purple-800">
+                Agu 2024 – Agu 2028 (Perkiraan)
+              </span>
+              <p class="text-xs text-slate-400 mt-1">Bangkalan, Jawa Timur</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Mempelajari arsitektur sistem informasi (TOGAF ADM), sistem basis data, rekayasa perangkat lunak, sistem pendukung keputusan (AHP), dan visualisasi data bisnis cerdas.
+          </p>
+        </article>
+
+        <!-- Edu 2: SMKN 1 Kertosono -->
+        <article class="canva-card p-6 sm:p-8 border-l-8 border-l-[#f5a617]">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-purple-100 dark:border-purple-900 pb-4 mb-4">
+            <div>
+              <span class="px-3 py-1 rounded-full bg-[#f5a617] text-white text-xs font-bold">
+                SMK - Rekayasa Perangkat Lunak
+              </span>
+              <h3 class="text-xl sm:text-2xl font-bold text-[#1e1329] dark:text-white mt-2">
+                SMKN 1 Kertosono
+              </h3>
+              <p class="text-sm font-semibold text-[#8c448f] dark:text-[#ffc371]">
+                Jurusan Rekayasa Perangkat Lunak (RPL)
+              </p>
+            </div>
+            <div class="text-left sm:text-right">
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-purple-50 dark:bg-purple-950 text-slate-600 dark:text-slate-300 border border-purple-200 dark:border-purple-800">
+                Jul 2021 – Mei 2024
+              </span>
+              <p class="text-xs text-slate-400 mt-1">Nganjuk, Jawa Timur</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Mempelajari dasar pemrograman web (HTML, CSS, PHP, JS, MySQL), aktif di OSIS divisi Apresiasi Seni (2021–2023), serta menyelesaikan PKL di studio foto profesional.
+          </p>
+        </article>
+
+        <!-- Edu 3: SMP & SD -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="canva-card p-5">
+            <span class="text-[10px] uppercase font-bold text-slate-400">Sekolah Menengah Pertama</span>
+            <h4 class="text-base font-bold text-[#1e1329] dark:text-white mt-1">SMPN 2 Kertosono</h4>
+            <p class="text-xs text-slate-500">Kabupaten Nganjuk, Jawa Timur</p>
+          </div>
+          <div class="canva-card p-5">
+            <span class="text-[10px] uppercase font-bold text-slate-400">Sekolah Dasar</span>
+            <h4 class="text-base font-bold text-[#1e1329] dark:text-white mt-1">SDN Tembarak 1</h4>
+            <p class="text-xs text-slate-500">Kertosono, Nganjuk, Jawa Timur</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 5: PENGALAMAN ORGANISASI
+       ======================================================================== -->
+  <section id="organisasi" class="py-20 bg-white dark:bg-[#0f0817] transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <div class="canva-selection-badge">
+          <span class="canva-badge-dot-bl"></span>
+          <span class="canva-badge-dot-br"></span>
+          <span class="text-xs sm:text-sm font-bold text-[#2d184a] dark:text-[#ffb356]">
+            Pengalaman
+          </span>
+        </div>
+        <h2 class="canva-section-title text-3xl sm:text-4xl">
+          Pengalaman Organisasi &amp; Kepanitiaan
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Rekam jejak kontribusi aktif dalam media kampus, administrasi kepengurusan, dan kegiatan sosial.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Exp 1: Admin Medsos Prodi SI -->
+        <article class="canva-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img src="assets/images/gallery/gal-utmtv-broadcast-04.jpg" alt="Admin Medsos Prodi SI" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#381f4f] text-white text-[11px] font-bold shadow-md">
+                AGUSTUS 2026 – SEKARANG
+              </span>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="text-lg sm:text-xl font-bold text-[#1e1329] dark:text-white">Admin Media Sosial</h3>
+              <p class="text-xs sm:text-sm font-semibold text-[#8c448f] dark:text-[#ffc371]">Program Studi Sistem Informasi UTM</p>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                Mengelola akun resmi Instagram &amp; TikTok prodi, merencanakan konten editorial, publikasi kegiatan akademik, dan menjaga interaksi aktif dengan calon mahasiswa baru.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-purple-50 dark:border-purple-900/40 flex flex-wrap gap-1.5">
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-[#381f4f] dark:text-purple-300 font-semibold">Social Media Ops</span>
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-[#381f4f] dark:text-purple-300 font-semibold">Content Planning</span>
+          </div>
+        </article>
+
+        <!-- Exp 2: UTM TV Staf Ahli -->
+        <article class="canva-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img src="assets/images/gallery/gal-utmtv-shooting-01.jpg" alt="UTM TV Content Creative" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#8c448f] text-white text-[11px] font-bold shadow-md">
+                AGUSTUS 2026 – SEKARANG
+              </span>
+              <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#fdbb30] text-[#381f4f] text-[10px] font-extrabold shadow-md">
+                PROMOSI: STAF AHLI
+              </span>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="text-lg sm:text-xl font-bold text-[#1e1329] dark:text-white">Content Creative [Staf Ahli]</h3>
+              <p class="text-xs sm:text-sm font-semibold text-[#8c448f] dark:text-[#ffc371]">UTM TV – Media Televisi Resmi Kampus</p>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                Dipromosikan dari Staf Muda menjadi Staf Ahli setelah magang. Bertanggung jawab menjaga standar kualitas produksi audio-visual, riset ide liputan, dan membimbing staf muda.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-purple-50 dark:border-purple-900/40 flex flex-wrap gap-1.5">
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-[#8c448f] dark:text-purple-300 font-semibold">Video Production</span>
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-[#8c448f] dark:text-purple-300 font-semibold">Mentoring</span>
+          </div>
+        </article>
+
+        <!-- Exp 3: UKMFT-ITC -->
+        <article class="canva-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img src="assets/images/gallery/gal-itc-charity-01.jpg" alt="UKMFT ITC" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#381f4f] text-white text-[11px] font-bold shadow-md">
+                JANUARI – AGUSTUS 2025
+              </span>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="text-lg sm:text-xl font-bold text-[#1e1329] dark:text-white">Sekretaris Divisi PSDM</h3>
+              <p class="text-xs sm:text-sm font-semibold text-[#381f4f] dark:text-[#ffc371]">UKMFT-ITC (Information Technology Computer) UTM</p>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                Mengelola administrasi persuratan dan notulensi divisi PSDM, panitia orientasi NFINITE mahasiswa baru, Bendahara Pelaksana (Benpel) ITC Charity, serta MC Dies Natalis UKMFT-ITC.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-purple-50 dark:border-purple-900/40 flex flex-wrap gap-1.5">
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-[#381f4f] dark:text-purple-300 font-semibold">Sekretariat</span>
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-[#381f4f] dark:text-purple-300 font-semibold">Bendahara Charity</span>
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-[#381f4f] dark:text-purple-300 font-semibold">Master of Ceremony</span>
+          </div>
+        </article>
+
+        <!-- Exp 4: Kencana -->
+        <article class="canva-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img src="assets/images/gallery/gal-kencana-gotoschool-01.jpg" alt="Komunitas Kencana" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#f5a617] text-white text-[11px] font-bold shadow-md">
+                JANUARI – AGUSTUS 2025
+              </span>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="text-lg sm:text-xl font-bold text-[#1e1329] dark:text-white">Anggota Divisi POSDM</h3>
+              <p class="text-xs sm:text-sm font-semibold text-[#f5a617]">Komunitas Cah Nganjuk (Kencana)</p>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                Terlibat dalam program kerja Go to School sosialisasi kampus ke SMA/SMK se-Nganjuk, Bendahara Dies Natalis Kencana ke-19, serta Sie Acara dan MC pada kegiatan Welcome to Maba.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-purple-50 dark:border-purple-900/40 flex flex-wrap gap-1.5">
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-[#f5a617] font-semibold">Go to School</span>
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-[#f5a617] font-semibold">Bendahara Acara</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 6: MINAT & SKILL
+       ======================================================================== -->
+  <section id="skill" class="py-20 bg-[#fffdfb] dark:bg-[#12091f] transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <div class="canva-selection-badge">
+          <span class="canva-badge-dot-bl"></span>
+          <span class="canva-badge-dot-br"></span>
+          <span class="text-xs sm:text-sm font-bold text-[#2d184a] dark:text-[#ffb356]">
+            Skill
+          </span>
+        </div>
+        <h2 class="canva-section-title text-3xl sm:text-4xl">
+          Keahlian &amp; Kemampuan
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Penguasaan teknis dan interpersonal yang relevan untuk kebutuhan magang profesional.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Skill 1 -->
+        <div class="canva-card p-6 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#381f4f] text-[#fdbb30] flex items-center justify-center text-lg">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3 class="text-base font-bold text-[#1e1329] dark:text-white">Web Development</h3>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">HTML5</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">CSS3</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">JavaScript</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">PHP</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="canva-card p-6 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#8c448f] text-white flex items-center justify-center text-lg">
+            <i class="fa-solid fa-diagram-project"></i>
+          </div>
+          <h3 class="text-base font-bold text-[#1e1329] dark:text-white">System Analysis &amp; Design</h3>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#8c448f] dark:text-purple-300">System Analysis</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#8c448f] dark:text-purple-300">BPMN Modeling</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#8c448f] dark:text-purple-300">UML &amp; Use Case</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#8c448f] dark:text-purple-300">ERD Design</span>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="canva-card p-6 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#f5a617] text-white flex items-center justify-center text-lg">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h3 class="text-base font-bold text-[#1e1329] dark:text-white">Data Analytics &amp; BI</h3>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#f5a617]">Power BI</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#f5a617]">Microsoft Excel</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#f5a617]">Python Data</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#f5a617]">Data Mining</span>
+          </div>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="canva-card p-6 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#381f4f] text-[#fdbb30] flex items-center justify-center text-lg">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-base font-bold text-[#1e1329] dark:text-white">IS &amp; IT Governance</h3>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">TOGAF ADM</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">Metode AHP</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">Decision Support</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">Software QA</span>
+          </div>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="canva-card p-6 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#8c448f] text-white flex items-center justify-center text-lg">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h3 class="text-base font-bold text-[#1e1329] dark:text-white">Design &amp; Content</h3>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#8c448f] dark:text-purple-300">Figma (UI/UX)</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#8c448f] dark:text-purple-300">Canva Design</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#8c448f] dark:text-purple-300">CapCut Video</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#8c448f] dark:text-purple-300">Social Media</span>
+          </div>
+        </div>
+
+        <!-- Skill 6 -->
+        <div class="canva-card p-6 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#fdbb30] text-[#381f4f] flex items-center justify-center text-lg">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3 class="text-base font-bold text-[#1e1329] dark:text-white">Soft Skills Profesional</h3>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">Public Speaking &amp; MC</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">Team Collaboration</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">Problem Solving</span>
+            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-xs font-semibold text-[#381f4f] dark:text-purple-300">Time Management</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 7: PORTOFOLIO / PROYEK
+       ======================================================================== -->
+  <section id="projek" class="py-20 bg-white dark:bg-[#0f0817] transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+        <div class="canva-selection-badge">
+          <span class="canva-badge-dot-bl"></span>
+          <span class="canva-badge-dot-br"></span>
+          <span class="text-xs sm:text-sm font-bold text-[#2d184a] dark:text-[#ffb356]">
+            Portofolio
+          </span>
+        </div>
+        <h2 class="canva-section-title text-3xl sm:text-4xl">
+          Projek Pilihan &amp; Studi Kasus
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Dokumentasi teknis proyek akademik, analisis bisnis, implementasi perangkat lunak, dan riset mandiri.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <button class="project-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition bg-[#381f4f] text-white shadow-md" data-filter="all">
+          Semua Proyek (9)
+        </button>
+        <button class="project-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-purple-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-filter="system">
+          Sistem &amp; Arsitektur
+        </button>
+        <button class="project-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-purple-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-filter="data">
+          Data &amp; Analytics
+        </button>
+        <button class="project-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-purple-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-filter="web">
+          Web &amp; Software
+        </button>
+        <button class="project-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-purple-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-filter="research">
+          Riset &amp; Publikasi
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- P1: Netflix Power BI -->
+        <article class="project-item canva-card overflow-hidden flex flex-col justify-between" data-category="data">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="assets/images/projects/project-netflix-dashboard-1.png" alt="Netflix Power BI" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#381f4f] text-white text-[10px] font-bold">POWER BI</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-base font-bold text-[#1e1329] dark:text-white leading-snug">Netflix Content Analytics – Power BI</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+                Visualisasi interaktif dataset ribuan konten global Netflix: proporsi Film vs Serial, tren rilis tahunan, dan rating usia penonton.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-purple-50 dark:border-purple-900/40 flex items-center justify-between">
+            <button onclick="viewProjectDetail('netflix-powerbi')" class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] hover:underline flex items-center gap-1.5">
+              <span>Detail Proyek</span>
+              <span class="w-5 h-5 rounded-full bg-[#fdbb30] flex items-center justify-center text-[#381f4f] text-[9px]"><i class="fa-solid fa-play"></i></span>
+            </button>
+            <a href="assets/documents/projects/Netflix-Data-Analytics-PowerBI.pdf" target="_blank" class="text-xs text-slate-400 hover:text-[#381f4f]"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+          </div>
+        </article>
+
+        <!-- P2: TOGAF ADM -->
+        <article class="project-item canva-card overflow-hidden flex flex-col justify-between" data-category="system">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="assets/images/projects/project-togaf-architecture-1.png" alt="TOGAF ADM" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#8c448f] text-white text-[10px] font-bold">TOGAF ADM</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-base font-bold text-[#1e1329] dark:text-white leading-snug">Enterprise Architecture Cafe Millennials</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+                Perancangan enterprise architecture sistem kasir kafe mengadopsi TOGAF ADM: Preliminary, Architecture Vision, Business, IS &amp; Technology.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-purple-50 dark:border-purple-900/40 flex items-center justify-between">
+            <button onclick="viewProjectDetail('togaf-millennials')" class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] hover:underline flex items-center gap-1.5">
+              <span>Detail Proyek</span>
+              <span class="w-5 h-5 rounded-full bg-[#fdbb30] flex items-center justify-center text-[#381f4f] text-[9px]"><i class="fa-solid fa-play"></i></span>
+            </button>
+            <a href="assets/documents/projects/TOGAF-ADM-Kasir-Millennials.pdf" target="_blank" class="text-xs text-slate-400 hover:text-[#381f4f]"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+          </div>
+        </article>
+
+        <!-- P3: Teh Kota Waterfall -->
+        <article class="project-item canva-card overflow-hidden flex flex-col justify-between" data-category="web">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="assets/images/projects/project-tehkota-ui-1.png" alt="Teh Kota" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#381f4f] text-white text-[10px] font-bold">WATERFALL</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-base font-bold text-[#1e1329] dark:text-white leading-snug">Sistem Kasir Web Teh Kota – Waterfall</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+                Manajemen proyek kasir point-of-sale berbasis web untuk UMKM Teh Kota Kamal dari analisis requirement, Gantt chart, hingga UI/UX.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-purple-50 dark:border-purple-900/40 flex items-center justify-between">
+            <button onclick="viewProjectDetail('teh-kota-waterfall')" class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] hover:underline flex items-center gap-1.5">
+              <span>Detail Proyek</span>
+              <span class="w-5 h-5 rounded-full bg-[#fdbb30] flex items-center justify-center text-[#381f4f] text-[9px]"><i class="fa-solid fa-play"></i></span>
+            </button>
+            <a href="assets/documents/projects/Manajemen-Proyek-Teh-Kota-Waterfall.pdf" target="_blank" class="text-xs text-slate-400 hover:text-[#381f4f]"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+          </div>
+        </article>
+
+        <!-- P4: Mie Ayam Halim -->
+        <article class="project-item canva-card overflow-hidden flex flex-col justify-between" data-category="web">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="assets/images/projects/project-mieayam-ui-1.png" alt="Mie Ayam Halim" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#f5a617] text-white text-[10px] font-bold">FINTECH</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-base font-bold text-[#1e1329] dark:text-white leading-snug">Integrasi Transaksi Mie Ayam Halim</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+                Digitalisasi transaksi pembayaran dan kasir berbasis web guna mempercepat order menu dan meminimalisir kekeliruan kas manual UMKM.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-purple-50 dark:border-purple-900/40 flex items-center justify-between">
+            <button onclick="viewProjectDetail('mie-ayam-halim')" class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] hover:underline flex items-center gap-1.5">
+              <span>Detail Proyek</span>
+              <span class="w-5 h-5 rounded-full bg-[#fdbb30] flex items-center justify-center text-[#381f4f] text-[9px]"><i class="fa-solid fa-play"></i></span>
+            </button>
+            <a href="assets/documents/projects/Fintech-Mie-Ayam-Halim.pdf" target="_blank" class="text-xs text-slate-400 hover:text-[#381f4f]"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+          </div>
+        </article>
+
+        <!-- P5: Skripsi Workflow -->
+        <article class="project-item canva-card overflow-hidden flex flex-col justify-between" data-category="system">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="assets/images/projects/project-skripsi-workflow-1.png" alt="Skripsi Workflow" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#381f4f] text-white text-[10px] font-bold">WORKFLOW</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-base font-bold text-[#1e1329] dark:text-white leading-snug">Sistem Pengajuan Tugas Akhir / Skripsi</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+                Pemodelan alur digital education workflow pengajuan judul skripsi, tracking approval pembimbing, hingga pendaftaran sidang.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-purple-50 dark:border-purple-900/40 flex items-center justify-between">
+            <button onclick="viewProjectDetail('skripsi-workflow')" class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] hover:underline flex items-center gap-1.5">
+              <span>Detail Proyek</span>
+              <span class="w-5 h-5 rounded-full bg-[#fdbb30] flex items-center justify-center text-[#381f4f] text-[9px]"><i class="fa-solid fa-play"></i></span>
+            </button>
+            <a href="assets/documents/projects/Analisis-Proses-Bisnis-Skripsi.pdf" target="_blank" class="text-xs text-slate-400 hover:text-[#381f4f]"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+          </div>
+        </article>
+
+        <!-- P6: SPK AHP -->
+        <article class="project-item canva-card overflow-hidden flex flex-col justify-between" data-category="data">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="assets/images/placeholders/project-placeholder-02.svg" alt="AHP Marketplace" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#8c448f] text-white text-[10px] font-bold">METODE AHP</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-base font-bold text-[#1e1329] dark:text-white leading-snug">SPK Pemilihan Marketplace – AHP</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+                Sistem pendukung keputusan pemilihan e-commerce bagi mahasiswa (Shopee, Tokopedia, Lazada) dengan 10 kriteria evaluasi AHP.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-purple-50 dark:border-purple-900/40 flex items-center justify-between">
+            <button onclick="viewProjectDetail('ahp-marketplace')" class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] hover:underline flex items-center gap-1.5">
+              <span>Detail Proyek</span>
+              <span class="w-5 h-5 rounded-full bg-[#fdbb30] flex items-center justify-center text-[#381f4f] text-[9px]"><i class="fa-solid fa-play"></i></span>
+            </button>
+            <span class="text-xs text-slate-400">10 Kriteria</span>
+          </div>
+        </article>
+
+        <!-- P7: Manajemen Restoran -->
+        <article class="project-item canva-card overflow-hidden flex flex-col justify-between" data-category="system">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="assets/images/placeholders/project-placeholder-01.svg" alt="Sistem Manajemen Restoran" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#381f4f] text-white text-[10px] font-bold">DATABASE</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-base font-bold text-[#1e1329] dark:text-white leading-snug">Sistem Manajemen Restoran &amp; Cafe</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+                Perancangan basis data relasional normalisasi 3NF untuk pengelolaan transaksi kasir, meja, menu, dan inventaris bahan baku.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-purple-50 dark:border-purple-900/40 flex items-center justify-between">
+            <button onclick="viewProjectDetail('restoran-cafe')" class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] hover:underline flex items-center gap-1.5">
+              <span>Detail Proyek</span>
+              <span class="w-5 h-5 rounded-full bg-[#fdbb30] flex items-center justify-center text-[#381f4f] text-[9px]"><i class="fa-solid fa-play"></i></span>
+            </button>
+            <span class="text-xs text-slate-400">MySQL 3NF</span>
+          </div>
+        </article>
+
+        <!-- P8: Software QA -->
+        <article class="project-item canva-card overflow-hidden flex flex-col justify-between" data-category="web">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="assets/images/placeholders/project-placeholder-03.svg" alt="Software Testing" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#8c448f] text-white text-[10px] font-bold">QA TESTING</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-base font-bold text-[#1e1329] dark:text-white leading-snug">Pengujian Perangkat Lunak Layanan Medis</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+                Implementasi manual testing, unit testing, dan integration testing pada portal fungsional dokter dan rekam medis pasien.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-purple-50 dark:border-purple-900/40 flex items-center justify-between">
+            <button onclick="viewProjectDetail('software-testing-medis')" class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] hover:underline flex items-center gap-1.5">
+              <span>Detail Proyek</span>
+              <span class="w-5 h-5 rounded-full bg-[#fdbb30] flex items-center justify-center text-[#381f4f] text-[9px]"><i class="fa-solid fa-play"></i></span>
+            </button>
+            <span class="text-xs text-slate-400">Test Suites</span>
+          </div>
+        </article>
+
+        <!-- P9: Riset Sinta 5 -->
+        <article class="project-item canva-card overflow-hidden flex flex-col justify-between" data-category="research">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <img src="assets/images/projects/jurnal-bukti-loa.jpg" alt="Riset Sinta 5" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-emerald-600 text-white text-[10px] font-bold">SINTA 5 LoA</span>
+            </div>
+            <div class="p-6 space-y-2">
+              <h3 class="text-base font-bold text-[#1e1329] dark:text-white leading-snug">Artikel Riset Mandiri (Sinta 5)</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+                Publikasi ilmiah mandiri ber-Letter of Acceptance (LoA) terbit di jurnal nasional terakreditasi Sinta 5.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-purple-50 dark:border-purple-900/40 flex items-center justify-between">
+            <button onclick="viewProjectDetail('artikel-sinta-5')" class="text-xs font-bold text-[#381f4f] dark:text-[#ffc371] hover:underline flex items-center gap-1.5">
+              <span>Detail Proyek</span>
+              <span class="w-5 h-5 rounded-full bg-[#fdbb30] flex items-center justify-center text-[#381f4f] text-[9px]"><i class="fa-solid fa-play"></i></span>
+            </button>
+            <span class="text-xs font-semibold text-emerald-600">Terakreditasi</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 8: SERTIFIKAT
+       ======================================================================== -->
+  <section id="sertifikat" class="py-20 bg-[#fffdfb] dark:bg-[#12091f] transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <div class="canva-selection-badge">
+          <span class="canva-badge-dot-bl"></span>
+          <span class="canva-badge-dot-br"></span>
+          <span class="text-xs sm:text-sm font-bold text-[#2d184a] dark:text-[#ffb356]">
+            Sertifikat
+          </span>
+        </div>
+        <h2 class="canva-section-title text-3xl sm:text-4xl">
+          Sertifikasi &amp; Pelatihan Resmi
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Dokumentasi sertifikasi resmi. Klik gambar untuk melihat ukuran penuh.
+        </p>
+      </div>
+
+      <!-- Certificates Grid (13 Authentic + 4 Placeholders) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Cert 1 -->
+        <article class="canva-card p-4 flex flex-col justify-between cursor-pointer group" onclick="viewCertificate('Pelatihan Pemrograman Skilvul', 'Skilvul', '2024', 'assets/images/certificates/cert-skilvul.jpg', 'Pelatihan pemrograman web dari Skilvul.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] bg-purple-50 dark:bg-purple-950/40 mb-3 relative">
+              <img src="assets/images/certificates/cert-skilvul.jpg" alt="Skilvul" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-[#381f4f] dark:text-[#ffc371] uppercase">Web Tech</span>
+            <h3 class="text-sm font-bold text-[#1e1329] dark:text-white mt-0.5">Pelatihan Skilvul</h3>
+            <p class="text-xs text-slate-400">Skilvul • 2024</p>
+          </div>
+        </article>
+
+        <!-- Cert 2 -->
+        <article class="canva-card p-4 flex flex-col justify-between cursor-pointer group" onclick="viewCertificate('Internship UTM TV Content Creative', 'UTM TV', '2025', 'assets/images/certificates/cert-internship-utmtv.jpeg', 'Sertifikat magang Content Creative di UTM TV.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] bg-purple-50 dark:bg-purple-950/40 mb-3 relative">
+              <img src="assets/images/certificates/cert-internship-utmtv.jpeg" alt="UTM TV" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-[#8c448f] dark:text-[#ffc371] uppercase">Media</span>
+            <h3 class="text-sm font-bold text-[#1e1329] dark:text-white mt-0.5">Internship UTM TV</h3>
+            <p class="text-xs text-slate-400">UTM TV • 2025</p>
+          </div>
+        </article>
+
+        <!-- Cert 3 -->
+        <article class="canva-card p-4 flex flex-col justify-between cursor-pointer group" onclick="viewCertificate('Sekretaris Divisi PSDM UKMFT-ITC', 'UKMFT-ITC', '2025', 'assets/images/certificates/cert-staff-sekretaris-psdm-itc.jpeg', 'Sertifikat Sekretaris Divisi PSDM UKMFT-ITC.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] bg-purple-50 dark:bg-purple-950/40 mb-3 relative">
+              <img src="assets/images/certificates/cert-staff-sekretaris-psdm-itc.jpeg" alt="ITC" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-[#381f4f] dark:text-[#ffc371] uppercase">Organisasi</span>
+            <h3 class="text-sm font-bold text-[#1e1329] dark:text-white mt-0.5">Sekretaris PSDM ITC</h3>
+            <p class="text-xs text-slate-400">UKMFT-ITC • 2025</p>
+          </div>
+        </article>
+
+        <!-- Cert 4 -->
+        <article class="canva-card p-4 flex flex-col justify-between cursor-pointer group" onclick="viewCertificate('Panitia Infinite ITC', 'UKMFT-ITC', '2025', 'assets/images/certificates/cert-panitia-infinite-itc.jpeg', 'Sertifikat Panitia Infinite UKMFT-ITC.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] bg-purple-50 dark:bg-purple-950/40 mb-3 relative">
+              <img src="assets/images/certificates/cert-panitia-infinite-itc.jpeg" alt="Infinite" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-[#8c448f] dark:text-[#ffc371] uppercase">Kepanitiaan</span>
+            <h3 class="text-sm font-bold text-[#1e1329] dark:text-white mt-0.5">Panitia Infinite ITC</h3>
+            <p class="text-xs text-slate-400">UKMFT-ITC • 2025</p>
+          </div>
+        </article>
+
+        <!-- Cert 5 -->
+        <article class="canva-card p-4 flex flex-col justify-between cursor-pointer group" onclick="viewCertificate('Staff POSDM Kencana', 'Kencana', '2025', 'assets/images/certificates/cert-staff-posdm-kencana.jpeg', 'Sertifikat pengurus divisi POSDM Komunitas Cah Nganjuk.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] bg-purple-50 dark:bg-purple-950/40 mb-3 relative">
+              <img src="assets/images/certificates/cert-staff-posdm-kencana.jpeg" alt="Kencana" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-[#f5a617] uppercase">Organisasi</span>
+            <h3 class="text-sm font-bold text-[#1e1329] dark:text-white mt-0.5">Staff POSDM Kencana</h3>
+            <p class="text-xs text-slate-400">Kencana • 2025</p>
+          </div>
+        </article>
+
+        <!-- Cert 6 -->
+        <article class="canva-card p-4 flex flex-col justify-between cursor-pointer group" onclick="viewCertificate('Bendahara Dies Natalis Kencana ke-19', 'Kencana', '2025', 'assets/images/certificates/cert-dies-natalis-kencana-19.jpg', 'Bendahara perayaan Dies Natalis Kencana ke-19.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] bg-purple-50 dark:bg-purple-950/40 mb-3 relative">
+              <img src="assets/images/certificates/cert-dies-natalis-kencana-19.jpg" alt="DN Kencana" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-[#f5a617] uppercase">Bendahara</span>
+            <h3 class="text-sm font-bold text-[#1e1329] dark:text-white mt-0.5">Dies Natalis Kencana 19</h3>
+            <p class="text-xs text-slate-400">Kencana • 2025</p>
+          </div>
+        </article>
+
+        <!-- Cert 7 -->
+        <article class="canva-card p-4 flex flex-col justify-between cursor-pointer group" onclick="viewCertificate('Praktik Kerja Lapangan (PKL)', 'SMKN 1 Kertosono', '2023', 'assets/images/certificates/cert-pkl-smkn1-kertosono.jpeg', 'Sertifikat PKL di studio foto.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] bg-purple-50 dark:bg-purple-950/40 mb-3 relative">
+              <img src="assets/images/certificates/cert-pkl-smkn1-kertosono.jpeg" alt="PKL" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-[#381f4f] dark:text-[#ffc371] uppercase">PKL Studio</span>
+            <h3 class="text-sm font-bold text-[#1e1329] dark:text-white mt-0.5">PKL Studio Foto</h3>
+            <p class="text-xs text-slate-400">SMKN 1 Kertosono • 2023</p>
+          </div>
+        </article>
+
+        <!-- Cert 8 -->
+        <article class="canva-card p-4 flex flex-col justify-between cursor-pointer group" onclick="viewCertificate('Pengurus OSIS Divisi Apresiasi Seni', 'SMKN 1 Kertosono', '2023', 'assets/images/certificates/cert-osis-smkn1.jpeg', 'Sertifikat OSIS Seni 2021-2023.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] bg-purple-50 dark:bg-purple-950/40 mb-3 relative">
+              <img src="assets/images/certificates/cert-osis-smkn1.jpeg" alt="OSIS" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-[#8c448f] dark:text-[#ffc371] uppercase">OSIS</span>
+            <h3 class="text-sm font-bold text-[#1e1329] dark:text-white mt-0.5">OSIS Divisi Seni</h3>
+            <p class="text-xs text-slate-400">SMKN 1 Kertosono • 2023</p>
+          </div>
+        </article>
+
+        <!-- 4 MANDATORY EMPTY CERTIFICATE SLOTS -->
+        <article class="canva-card p-4 flex flex-col justify-between border-dashed border-2 border-purple-300 dark:border-purple-800 bg-purple-50/20 cursor-pointer group" onclick="viewCertificate('Certificate Slot #01', 'Segera Hadir', 'Upcoming', 'assets/images/placeholders/certificate-placeholder-01.svg', 'Slot sertifikasi baru yang akan ditambahkan mendatang.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] mb-3">
+              <img src="assets/images/placeholders/certificate-placeholder-01.svg" alt="Slot 01" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-slate-400 uppercase">Slot Kosong</span>
+            <h3 class="text-sm font-bold text-slate-700 dark:text-slate-300 mt-0.5">Certificate Coming Soon</h3>
+            <p class="text-xs text-slate-400">Slot Pelatihan #01</p>
+          </div>
+        </article>
+
+        <article class="canva-card p-4 flex flex-col justify-between border-dashed border-2 border-purple-300 dark:border-purple-800 bg-purple-50/20 cursor-pointer group" onclick="viewCertificate('Certificate Slot #02', 'Segera Hadir', 'Upcoming', 'assets/images/placeholders/certificate-placeholder-02.svg', 'Slot sertifikasi baru yang akan ditambahkan mendatang.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] mb-3">
+              <img src="assets/images/placeholders/certificate-placeholder-02.svg" alt="Slot 02" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-slate-400 uppercase">Slot Kosong</span>
+            <h3 class="text-sm font-bold text-slate-700 dark:text-slate-300 mt-0.5">Certificate Coming Soon</h3>
+            <p class="text-xs text-slate-400">Slot Pelatihan #02</p>
+          </div>
+        </article>
+
+        <article class="canva-card p-4 flex flex-col justify-between border-dashed border-2 border-purple-300 dark:border-purple-800 bg-purple-50/20 cursor-pointer group" onclick="viewCertificate('Certificate Slot #03', 'Segera Hadir', 'Upcoming', 'assets/images/placeholders/certificate-placeholder-03.svg', 'Slot sertifikasi baru yang akan ditambahkan mendatang.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] mb-3">
+              <img src="assets/images/placeholders/certificate-placeholder-03.svg" alt="Slot 03" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-slate-400 uppercase">Slot Kosong</span>
+            <h3 class="text-sm font-bold text-slate-700 dark:text-slate-300 mt-0.5">Certificate Coming Soon</h3>
+            <p class="text-xs text-slate-400">Slot Pelatihan #03</p>
+          </div>
+        </article>
+
+        <article class="canva-card p-4 flex flex-col justify-between border-dashed border-2 border-purple-300 dark:border-purple-800 bg-purple-50/20 cursor-pointer group" onclick="viewCertificate('Certificate Slot #04', 'Segera Hadir', 'Upcoming', 'assets/images/placeholders/certificate-placeholder-04.svg', 'Slot sertifikasi baru yang akan ditambahkan mendatang.')">
+          <div>
+            <div class="rounded-xl overflow-hidden aspect-[4/3] mb-3">
+              <img src="assets/images/placeholders/certificate-placeholder-04.svg" alt="Slot 04" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            </div>
+            <span class="text-[10px] font-bold text-slate-400 uppercase">Slot Kosong</span>
+            <h3 class="text-sm font-bold text-slate-700 dark:text-slate-300 mt-0.5">Certificate Coming Soon</h3>
+            <p class="text-xs text-slate-400">Slot Pelatihan #04</p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 9: ULASAN & DOKUMENTASI GALERI
+       ======================================================================== -->
+  <section id="galeri" class="py-20 bg-white dark:bg-[#0f0817] transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+        <div class="canva-selection-badge">
+          <span class="canva-badge-dot-bl"></span>
+          <span class="canva-badge-dot-br"></span>
+          <span class="text-xs sm:text-sm font-bold text-[#2d184a] dark:text-[#ffb356]">
+            Ulasan &amp; Dokumentasi
+          </span>
+        </div>
+        <h2 class="canva-section-title text-3xl sm:text-4xl">
+          Galeri Kegiatan Organisasi &amp; Kampus
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Dokumentasi asli kegiatan UKMFT-ITC, Komunitas Kencana, dan liputan UTM TV.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition bg-[#8c448f] text-white shadow-md" data-filter="all">
+          Semua Galeri (14)
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-purple-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-filter="itc">
+          UKMFT ITC
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-purple-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-filter="kencana">
+          Komunitas Kencana
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition bg-purple-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300" data-filter="utmtv">
+          UTM TV
+        </button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        
+        <div class="gallery-item canva-card overflow-hidden cursor-pointer group" data-category="itc" onclick="viewGallery('ITC Charity - Bendahara Pelaksana', 'UKMFT ITC', 'assets/images/gallery/gal-itc-charity-01.jpg', 'Frasinka selaku Bendahara Pelaksana (Benpel) dalam penyerahan bantuan sosial ITC Charity.')">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="assets/images/gallery/gal-itc-charity-01.jpg" alt="ITC Charity" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <span class="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-[#381f4f] text-white text-[10px] font-bold">ITC Charity</span>
+          </div>
+          <div class="p-3">
+            <h4 class="text-xs font-bold text-[#1e1329] dark:text-white line-clamp-1">ITC Charity – Bendahara</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item canva-card overflow-hidden cursor-pointer group" data-category="itc" onclick="viewGallery('Panitia Orientasi NFINITE ITC', 'UKMFT ITC', 'assets/images/gallery/gal-itc-infinite-02.jpg', 'Aktivitas pengarahan mahasiswa baru Fakultas Teknik pada program orientasi Infinite ITC.')">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="assets/images/gallery/gal-itc-infinite-02.jpg" alt="Infinite ITC" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <span class="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-[#381f4f] text-white text-[10px] font-bold">NFINITE</span>
+          </div>
+          <div class="p-3">
+            <h4 class="text-xs font-bold text-[#1e1329] dark:text-white line-clamp-1">Panitia Orientasi Infinite</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item canva-card overflow-hidden cursor-pointer group" data-category="kencana" onclick="viewGallery('Kencana Go to School', 'Kencana', 'assets/images/gallery/gal-kencana-gotoschool-01.jpg', 'Sosialisasi perguruan tinggi ke siswa-siswi SMA/SMK se-Kabupaten Nganjuk.')">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="assets/images/gallery/gal-kencana-gotoschool-01.jpg" alt="Go to School" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <span class="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-[#f5a617] text-white text-[10px] font-bold">Kencana</span>
+          </div>
+          <div class="p-3">
+            <h4 class="text-xs font-bold text-[#1e1329] dark:text-white line-clamp-1">Kencana Go to School</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item canva-card overflow-hidden cursor-pointer group" data-category="utmtv" onclick="viewGallery('Produksi Shooting Kreatif UTM TV', 'UTM TV', 'assets/images/gallery/gal-utmtv-shooting-01.jpg', 'Peliputan berita dan pembuatan konten edukatif kampus bersama kru penyiaran UTM TV.')">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="assets/images/gallery/gal-utmtv-shooting-01.jpg" alt="UTM TV Shooting" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <span class="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-[#8c448f] text-white text-[10px] font-bold">UTM TV</span>
+          </div>
+          <div class="p-3">
+            <h4 class="text-xs font-bold text-[#1e1329] dark:text-white line-clamp-1">Produksi Shooting UTM TV</h4>
+          </div>
+        </div>
+
+        <!-- 4 MANDATORY EMPTY GALLERY SLOTS -->
+        <div class="gallery-item canva-card overflow-hidden border-dashed border-2 border-purple-300 dark:border-purple-800 bg-purple-50/20 cursor-pointer group" data-category="kampus" onclick="viewGallery('Slot Dokumentasi #01', 'Dokumentasi', 'assets/images/placeholders/gallery-placeholder-01.svg', 'Slot dokumentasi kegiatan yang disiapkan untuk penambahan foto mendatang.')">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="assets/images/placeholders/gallery-placeholder-01.svg" alt="Slot 01" class="w-full h-full object-cover group-hover:scale-105 transition" />
+          </div>
+          <div class="p-3">
+            <h4 class="text-xs font-bold text-slate-500 line-clamp-1">Dokumentasi Baru Segera Hadir</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item canva-card overflow-hidden border-dashed border-2 border-purple-300 dark:border-purple-800 bg-purple-50/20 cursor-pointer group" data-category="kampus" onclick="viewGallery('Slot Dokumentasi #02', 'Dokumentasi', 'assets/images/placeholders/gallery-placeholder-02.svg', 'Slot dokumentasi kegiatan yang disiapkan untuk penambahan foto mendatang.')">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="assets/images/placeholders/gallery-placeholder-02.svg" alt="Slot 02" class="w-full h-full object-cover group-hover:scale-105 transition" />
+          </div>
+          <div class="p-3">
+            <h4 class="text-xs font-bold text-slate-500 line-clamp-1">Dokumentasi Baru Segera Hadir</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item canva-card overflow-hidden border-dashed border-2 border-purple-300 dark:border-purple-800 bg-purple-50/20 cursor-pointer group" data-category="kampus" onclick="viewGallery('Slot Dokumentasi #03', 'Dokumentasi', 'assets/images/placeholders/gallery-placeholder-03.svg', 'Slot dokumentasi kegiatan yang disiapkan untuk penambahan foto mendatang.')">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="assets/images/placeholders/gallery-placeholder-03.svg" alt="Slot 03" class="w-full h-full object-cover group-hover:scale-105 transition" />
+          </div>
+          <div class="p-3">
+            <h4 class="text-xs font-bold text-slate-500 line-clamp-1">Dokumentasi Baru Segera Hadir</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item canva-card overflow-hidden border-dashed border-2 border-purple-300 dark:border-purple-800 bg-purple-50/20 cursor-pointer group" data-category="kampus" onclick="viewGallery('Slot Dokumentasi #04', 'Dokumentasi', 'assets/images/placeholders/gallery-placeholder-04.svg', 'Slot dokumentasi kegiatan yang disiapkan untuk penambahan foto mendatang.')">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="assets/images/placeholders/gallery-placeholder-04.svg" alt="Slot 04" class="w-full h-full object-cover group-hover:scale-105 transition" />
+          </div>
+          <div class="p-3">
+            <h4 class="text-xs font-bold text-slate-500 line-clamp-1">Dokumentasi Baru Segera Hadir</h4>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECTION 10: KONTAK SAYA
+       ======================================================================== -->
+  <section id="kontak" class="py-20 bg-[#fffdfb] dark:bg-[#12091f] transition-colors relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <div class="canva-selection-badge">
+          <span class="canva-badge-dot-bl"></span>
+          <span class="canva-badge-dot-br"></span>
+          <span class="text-xs sm:text-sm font-bold text-[#2d184a] dark:text-[#ffb356]">
+            Kontak Saya
+          </span>
+        </div>
+        <h2 class="canva-section-title text-3xl sm:text-4xl">
+          Mari Terhubung &amp; Berkolaborasi
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          Terbuka untuk penawaran magang (internship), diskusi proyek teknologi, dan peluang profesional.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Contact Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <div class="canva-card p-5 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-950 text-[#381f4f] dark:text-[#ffc371] flex items-center justify-center text-xl shrink-0">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[11px] uppercase font-bold text-slate-400">Email</span>
+              <a href="mailto:josaanassya@gmail.com" class="block text-sm sm:text-base font-bold text-[#1e1329] dark:text-white hover:text-[#381f4f] transition truncate">
+                josaanassya@gmail.com
+              </a>
+              <button onclick="copyToClipboard('josaanassya@gmail.com', 'Alamat Email')" class="text-xs text-[#8c448f] hover:underline mt-1 font-semibold">
+                <i class="fa-regular fa-copy"></i> Salin Email
+              </button>
+            </div>
+          </div>
+
+          <div class="canva-card p-5 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[11px] uppercase font-bold text-slate-400">WhatsApp</span>
+              <a href="https://wa.me/6285871668132" target="_blank" class="block text-sm sm:text-base font-bold text-[#1e1329] dark:text-white hover:text-emerald-600 transition">
+                +62 858-7166-8132
+              </a>
+              <button onclick="copyToClipboard('085871668132', 'Nomor WhatsApp')" class="text-xs text-emerald-600 hover:underline mt-1 font-semibold">
+                <i class="fa-regular fa-copy"></i> Salin Nomor
+              </button>
+            </div>
+          </div>
+
+          <div class="canva-card p-5 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[11px] uppercase font-bold text-slate-400">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/frasinka-josa-anassya/" target="_blank" class="block text-sm sm:text-base font-bold text-[#1e1329] dark:text-white hover:text-blue-600 transition truncate">
+                in/frasinka-josa-anassya
+              </a>
+              <a href="https://www.linkedin.com/in/frasinka-josa-anassya/" target="_blank" class="inline-block text-xs font-semibold text-blue-600 hover:underline mt-1">
+                Kunjungi Profil LinkedIn &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Functional Form -->
+        <div class="lg:col-span-7">
+          <div class="canva-card p-6 sm:p-8">
+            <h3 class="text-xl font-bold text-[#1e1329] dark:text-white mb-2">
+              Kirim Pesan / Undangan
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 mb-6">
+              Pesan terhubung langsung dengan WhatsApp atau Email resmi Frasinka.
+            </p>
+
+            <form id="contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-name" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                    Nama / Perusahaan *
+                  </label>
+                  <input type="text" id="contact-name" required placeholder="Contoh: HRD PT. Inovasi Digital" class="w-full px-4 py-3 rounded-xl border border-purple-200 dark:border-purple-900 bg-white dark:bg-[#1a0f2b] text-sm focus:outline-none focus:ring-2 focus:ring-[#381f4f]" />
+                </div>
+                <div>
+                  <label for="contact-email" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                    Alamat Email (Opsional)
+                  </label>
+                  <input type="email" id="contact-email" placeholder="hrd@perusahaan.com" class="w-full px-4 py-3 rounded-xl border border-purple-200 dark:border-purple-900 bg-white dark:bg-[#1a0f2b] text-sm focus:outline-none focus:ring-2 focus:ring-[#381f4f]" />
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-subject" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                  Subjek Keperluan *
+                </label>
+                <select id="contact-subject" class="w-full px-4 py-3 rounded-xl border border-purple-200 dark:border-purple-900 bg-white dark:bg-[#1a0f2b] text-sm focus:outline-none focus:ring-2 focus:ring-[#381f4f]">
+                  <option value="Penawaran Peluang Magang (Internship)">Penawaran Peluang Magang (Internship)</option>
+                  <option value="Undangan Wawancara Kerja / Interview">Undangan Wawancara Kerja / Interview</option>
+                  <option value="Kolaborasi Projek Digital &amp; SI">Kolaborasi Projek Digital &amp; SI</option>
+                  <option value="Produksi Konten Kreatif Audio-Visual">Produksi Konten Kreatif Audio-Visual</option>
+                  <option value="Pertanyaan Umum / Diskusi">Pertanyaan Umum / Diskusi</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                  Isi Pesan / Penawaran *
+                </label>
+                <textarea id="contact-message" rows="4" required placeholder="Halo Frasinka, kami tertarik dengan portofolio Anda..." class="w-full px-4 py-3 rounded-xl border border-purple-200 dark:border-purple-900 bg-white dark:bg-[#1a0f2b] text-sm focus:outline-none focus:ring-2 focus:ring-[#381f4f]"></textarea>
+              </div>
+
+              <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button type="submit" id="btn-send-wa" class="w-full py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-md transition flex items-center justify-center gap-2">
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                  <span>Kirim via WhatsApp</span>
+                </button>
+
+                <button type="button" id="btn-send-email" class="w-full py-3.5 rounded-full bg-[#381f4f] hover:bg-[#27133a] text-white font-bold text-xs sm:text-sm shadow-md transition flex items-center justify-center gap-2">
+                  <i class="fa-regular fa-envelope text-base"></i>
+                  <span>Kirim via Email</span>
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       FOOTER (CANVA SIGNATURE BANNER & BRANDING)
+       ======================================================================== -->
+  <footer class="canva-bottom-ribbon py-8 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        
+        <div class="text-center md:text-left">
+          <p class="font-extrabold text-base tracking-tight">
+            Frasinka Josa Anassya
+          </p>
+          <p class="text-xs text-white/80">
+            Sistem Informasi • Universitas Trunojoyo Madura • Portofolio &copy; 2026.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <a href="#cover" class="hover:underline">Cover</a>
+          <a href="#perkenalan" class="hover:underline">Biodata</a>
+          <a href="#projek" class="hover:underline">Portofolio</a>
+          <a href="#sertifikat" class="hover:underline">Sertifikat</a>
+          <a href="#kontak" class="hover:underline">Kontak</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://www.linkedin.com/in/frasinka-josa-anassya/" target="_blank" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#381f4f] flex items-center justify-center text-xs transition">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/6285871668132" target="_blank" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white text-white hover:text-emerald-600 flex items-center justify-center text-xs transition">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="mailto:josaanassya@gmail.com" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#381f4f] flex items-center justify-center text-xs transition">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       UNIVERSAL MODAL DIALOG (PROJECTS, CERTIFICATES & GALLERY LIGHTBOX)
+       ======================================================================== -->
+  <div id="universal-modal" class="modal-backdrop fixed inset-0 z-50 bg-[#0f0817]/75 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-content-box w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 sm:p-8 shadow-2xl relative border border-purple-200 dark:border-purple-800 bg-white dark:bg-[#1a0f2b]">
+      
+      <!-- Close button -->
+      <button id="modal-close-btn" aria-label="Tutup Dialog" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-purple-50 dark:bg-purple-950 text-slate-500 hover:text-[#381f4f] dark:hover:text-white flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <!-- Modal Badge & Header -->
+      <div class="pr-8 mb-5 space-y-2">
+        <span id="modal-badge" class="inline-block px-3.5 py-1 rounded-full text-xs font-bold bg-[#fdbb30] text-[#381f4f]">
+          Detail Informasi
+        </span>
+        <h3 id="modal-title" class="text-xl sm:text-2xl font-bold text-[#1e1329] dark:text-white leading-tight"></h3>
+      </div>
+
+      <!-- Modal Body (Injected dynamically by JavaScript) -->
+      <div id="modal-body" class="space-y-4"></div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       BACK TO TOP BUTTON
+       ======================================================================== -->
+  <button id="back-to-top" aria-label="Kembali ke atas" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-[#381f4f] hover:bg-[#27133a] text-[#fdbb30] flex items-center justify-center shadow-lg opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:scale-105">
+    <i class="fa-solid fa-arrow-up text-sm"></i>
+  </button>
+
+
+  <!-- ========================================================================
+       FLOATING TOAST NOTIFICATION
+       ======================================================================== -->
+  <div id="toast" class="fixed bottom-6 left-6 z-50 px-5 py-3 rounded-2xl bg-[#1e1329] text-white dark:bg-white dark:text-[#1e1329] text-xs sm:text-sm font-semibold shadow-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 flex items-center gap-2.5 border border-purple-500/30">
+    Pemberitahuan
+  </div>
+
+</body>
+</html>

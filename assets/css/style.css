@@ -1,0 +1,331 @@
+/* ==========================================================================
+   PORTOFOLIO FRASINKA JOSA ANASSYA - CUSTOM STYLES
+   Exact Visual Replica of Canva PDF (Porto Frasinka Josa Anassya.pdf)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap');
+
+:root {
+  --canva-purple-deep: #3d2361;
+  --canva-purple-main: #533783;
+  --canva-purple-dark: #2a1545;
+  --canva-magenta: #8c448f;
+  --canva-coral: #e07a68;
+  --canva-amber: #f5a617;
+  --canva-peach: #ffb356;
+  --canva-yellow: #fdbb30;
+  --canva-bg: #ffffff;
+  --canva-ribbon-grad: linear-gradient(90deg, #742571 0%, #852e79 25%, #9b3d84 50%, #b86289 75%, #cca679 100%);
+}
+
+.dark {
+  --canva-bg: #0f0817;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--canva-bg);
+  color: #1e1329;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  color: #f8fafc;
+}
+
+/* ==========================================================================
+   CANVA SIGNATURE DESIGN COMPONENTS
+   ========================================================================== */
+
+/* 1. Selection-Box Badge with 4 Corner Dots (Direct from Page 2 "Halo semuanya!") */
+.canva-selection-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.4rem;
+  background-color: #ffffff;
+  border: 2px solid #2d184a;
+  border-radius: 0.65rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.dark .canva-selection-badge {
+  background-color: #1e132b;
+  border-color: #ffb356;
+}
+
+/* The 4 Corner Yellow Dots */
+.canva-selection-badge::before,
+.canva-selection-badge::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: #fdbb30;
+  border: 1.5px solid #2d184a;
+  border-radius: 50%;
+  z-index: 2;
+}
+.canva-selection-badge::before {
+  top: -4.5px;
+  left: -4.5px;
+}
+.canva-selection-badge::after {
+  top: -4.5px;
+  right: -4.5px;
+}
+
+.canva-badge-dot-bl,
+.canva-badge-dot-br {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: #fdbb30;
+  border: 1.5px solid #2d184a;
+  border-radius: 50%;
+  z-index: 2;
+}
+.canva-badge-dot-bl {
+  bottom: -4.5px;
+  left: -4.5px;
+}
+.canva-badge-dot-br {
+  bottom: -4.5px;
+  right: -4.5px;
+}
+
+/* 2. Stylized Name with Warm Amber Offset Layer (Direct from Page 2) */
+.canva-name-headline {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #4a2835;
+  text-shadow: 4px 4px 0px #ffb356;
+  letter-spacing: -0.02em;
+}
+.dark .canva-name-headline {
+  color: #ffffff;
+  text-shadow: 4px 4px 0px #f5a617;
+}
+
+.canva-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #381f4f;
+  text-shadow: 3px 3px 0px #ffd085;
+}
+.dark .canva-section-title {
+  color: #ffffff;
+  text-shadow: 3px 3px 0px #8c448f;
+}
+
+/* 3. Canva Signature Buttons */
+.canva-btn-purple {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem 0.65rem 1.75rem;
+  background-color: #381f4f;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(56, 31, 79, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.canva-btn-purple:hover {
+  background-color: #27133a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(56, 31, 79, 0.35);
+}
+
+.canva-btn-arrow-circle {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 9999px;
+  background-color: #fdbb30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #381f4f;
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+.canva-btn-purple:hover .canva-btn-arrow-circle {
+  transform: translateX(3px);
+}
+
+.canva-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  background-color: #ffffff;
+  color: #381f4f;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 2px solid #381f4f;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.canva-btn-outline:hover {
+  background-color: #f6f2fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(56, 31, 79, 0.15);
+}
+.dark .canva-btn-outline {
+  background-color: #1a0f2b;
+  color: #ffb356;
+  border-color: #ffb356;
+}
+.dark .canva-btn-outline:hover {
+  background-color: #26163e;
+}
+
+/* 4. Canva Top Floating Pill Navigation */
+.canva-floating-nav {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 9999px;
+  box-shadow: 0 4px 20px rgba(83, 55, 131, 0.08);
+  border: 1px solid rgba(83, 55, 131, 0.08);
+}
+.dark .canva-floating-nav {
+  background: rgba(26, 15, 43, 0.95);
+  border-color: rgba(255, 179, 86, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link-biodata { color: #3b82f6; }
+.nav-link-pengalaman { color: #b84592; }
+.nav-link-skill { color: #8c448f; }
+.nav-link-portofolio { color: #4075d9; }
+.nav-link-ulasan { color: #3b82f6; }
+.nav-link-kontak { color: #db3a84; }
+
+.dark .nav-link-biodata { color: #60a5fa; }
+.dark .nav-link-pengalaman { color: #f472b6; }
+.dark .nav-link-skill { color: #c084fc; }
+.dark .nav-link-portofolio { color: #93c5fd; }
+.dark .nav-link-ulasan { color: #60a5fa; }
+.dark .nav-link-kontak { color: #fb7185; }
+
+/* 5. Canva Signature Purple Gradient Banner */
+.canva-bottom-ribbon {
+  background: var(--canva-ribbon-grad);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 6. Floating Badges around Frasinka */
+.canva-pill-yellow {
+  background-color: #fdbb30;
+  color: #381f4f;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.4rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(253, 187, 48, 0.35);
+}
+
+.canva-badge-purple-arrow {
+  position: relative;
+  background-color: #381f4f;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(56, 31, 79, 0.3);
+}
+.canva-badge-purple-arrow::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 9px solid #381f4f;
+}
+
+/* 7. Canva Card Component */
+.canva-card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid #f0eaf7;
+  box-shadow: 0 8px 24px rgba(83, 55, 131, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.canva-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(83, 55, 131, 0.12);
+  border-color: #e2d2f2;
+}
+.dark .canva-card {
+  background-color: #190f26;
+  border-color: #321c4e;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+.dark .canva-card:hover {
+  box-shadow: 0 16px 36px rgba(255, 179, 86, 0.1);
+  border-color: #8c448f;
+}
+
+/* Modals */
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-content-box {
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal-backdrop.show .modal-content-box {
+  transform: scale(1);
+}
+
+.toast-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Marquee Scroll for Canva Ribbon */
+.marquee-wrapper {
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+}
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: canva-marquee 24s linear infinite;
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+@keyframes canva-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

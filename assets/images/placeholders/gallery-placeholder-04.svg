@@ -1,0 +1,13 @@
+<svg width="600" height="450" viewBox="0 0 600 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="450" rx="16" fill="#FBF9FE"/>
+  <rect x="12" y="12" width="576" height="426" rx="12" stroke="#8C448F" stroke-width="2" stroke-dasharray="8 8" stroke-opacity="0.3"/>
+  <circle cx="300" cy="180" r="50" fill="#8C448F" fill-opacity="0.08"/>
+  <circle cx="300" cy="180" r="38" fill="#8C448F" fill-opacity="0.12"/>
+  <path d="M280 170H288L292 165H308L312 170H320C323 170 325 172 325 175V195C325 198 323 200 320 200H280C277 200 275 198 275 195V175C275 172 277 170 280 170Z" stroke="#8C448F" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="300" cy="185" r="7" stroke="#8C448F" stroke-width="2.5"/>
+  <rect x="235" y="250" width="130" height="26" rx="13" fill="#8C448F" fill-opacity="0.1"/>
+  <text x="300" y="267" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" fill="#8C448F">GALLERY #04</text>
+  <text x="300" y="305" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="19" font-weight="700" fill="#2E1C4E">Dokumentasi Baru Segera Hadir</text>
+  <text x="300" y="332" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="13" font-weight="400" fill="#7C6D93">Slot Dokumentasi Kegiatan #04</text>
+  <text x="300" y="380" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="11" font-weight="500" fill="#B3A5C7">Aktivitas Organisasi &amp; Kampus</text>
+</svg>
